@@ -1,0 +1,139 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Certificeringen & Normeringen | Brandkasten.be"
+  description="Leer meer over de verschillende certificeringen en normeringen voor brandkasten en kluizen. Begrijp welke certificering u nodig heeft."
+>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Certificeringen & Normeringen</h1>
+        <p class="lead">Begrijp de verschillende certificeringen en kies de juiste kluis voor uw situatie</p>
+      </div>
+    </section>
+
+    <section class="certifications">
+      <div class="container">
+        <div class="cert-grid">
+          <article class="cert-card">
+            <h2>EN 1143-1</h2>
+            <p>Europese norm voor inbraakwerendheid van kluizen. Definieert verschillende weerstandsgraden (0-XIII) op basis van inbraakwerendheid.</p>
+          </article>
+
+          <article class="cert-card">
+            <h2>EN 1047-1</h2>
+            <p>Europese norm voor brandwerendheid. Test de bescherming van documenten en digitale media tegen brand gedurende specifieke periodes.</p>
+          </article>
+
+          <article class="cert-card">
+            <h2>EN 14450</h2>
+            <p>Norm voor lichtere beveiligingsunits. Ideaal voor thuisgebruik en kleinere bedrijven met security klassen S1 en S2.</p>
+          </article>
+
+          <article class="cert-card">
+            <h2>ECB-S</h2>
+            <p>Europees keurmerk dat garandeert dat een kluis voldoet aan de gestelde normen en regelmatig wordt gecontroleerd.</p>
+          </article>
+        </div>
+
+        <div class="info-block">
+          <h2>Waarom certificering belangrijk is</h2>
+          <p>Een gecertificeerde kluis biedt:</p>
+          <ul>
+            <li>Garantie van geteste veiligheid</li>
+            <li>Voldoening aan verzekeringseisen</li>
+            <li>Bewezen bescherming tegen specifieke risico's</li>
+            <li>Conformiteit met wettelijke vereisten</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+  }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .cert-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .cert-card h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .cert-card p {
+    line-height: 1.6;
+  }
+
+  .info-block {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .info-block h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .info-block ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .info-block li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .info-block li:before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 0;
+    }
+    
+    .cert-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

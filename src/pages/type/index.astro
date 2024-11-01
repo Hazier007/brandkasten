@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Types Brandkasten | Brandkasten.be" 
+  description="Ontdek de verschillende types brandkasten en kluizen - van brandwerende tot inbraakwerende kluizen. Vind de juiste kluis voor uw behoeften."
+>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Types Brandkasten</h1>
+        <p class="lead">Ontdek ons uitgebreide assortiment brandkasten en kluizen voor optimale beveiliging</p>
+      </div>
+    </section>
+
+    <section class="types">
+      <div class="container">
+        <div class="types-grid">
+          <article class="type-card">
+            <h2>Brandwerende Kluizen</h2>
+            <p>Bescherm waardevolle documenten en bezittingen tegen brand met onze gecertificeerde brandwerende kluizen. Verkrijgbaar met verschillende brandwerendheidsgraden.</p>
+            <a href="/type/brandwerende-kluis" class="btn">Meer informatie</a>
+          </article>
+
+          <article class="type-card">
+            <h2>Inbraakwerende Kluizen</h2>
+            <p>Maximale bescherming tegen inbraak met onze hoogwaardige inbraakwerende kluizen. Verkrijgbaar in verschillende veiligheidsklassen.</p>
+            <a href="/type/inbraakwerende-kluis" class="btn">Meer informatie</a>
+          </article>
+
+          <article class="type-card">
+            <h2>Documentenkluizen</h2>
+            <p>Speciaal ontworpen voor het veilig opbergen van belangrijke documenten, met optimale bescherming tegen brand en inbraak.</p>
+            <a href="/type/documentenkluis" class="btn">Meer informatie</a>
+          </article>
+
+          <article class="type-card">
+            <h2>Vuurwapenkluizen</h2>
+            <p>Gecertificeerde kluizen voor het veilig opbergen van vuurwapens, conform alle wettelijke vereisten.</p>
+            <a href="/type/vuurwapenkluis" class="btn">Meer informatie</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+  }
+
+  .types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .type-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .type-card h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .type-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  .btn:hover {
+    background: var(--secondary);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 0;
+    }
+    
+    .types-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

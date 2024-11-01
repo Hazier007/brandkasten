@@ -1,0 +1,212 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Hulp & Advies | Brandkasten.be"
+  description="Krijg expert advies over het kiezen van de juiste brandkast. Ontdek onze handleidingen en tips voor optimale beveiliging."
+>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Hulp & Advies</h1>
+        <p class="lead">Expert advies voor het kiezen van de juiste brandkast</p>
+      </div>
+    </section>
+
+    <section class="advice-content">
+      <div class="container">
+        <div class="guide-section">
+          <h2>Keuzewijzer</h2>
+          <div class="guides-grid">
+            <article class="guide-card">
+              <h3>Brandwerendheid</h3>
+              <p>Leer alles over brandwerendheidsklassen en hoe u de juiste bescherming kiest voor uw situatie.</p>
+              <a href="/advies/brandwerendheid" class="link-button">Lees meer</a>
+            </article>
+
+            <article class="guide-card">
+              <h3>Inbraakwerendheid</h3>
+              <p>Ontdek welke veiligheidsklasse u nodig heeft en hoe dit samenhangt met verzekeringseisen.</p>
+              <a href="/advies/inbraakwerendheid" class="link-button">Lees meer</a>
+            </article>
+
+            <article class="guide-card">
+              <h3>Formaat & Capaciteit</h3>
+              <p>Bepaal de juiste afmetingen en inhoud voor uw specifieke behoeften.</p>
+              <a href="/advies/formaat-capaciteit" class="link-button">Lees meer</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <h2>Veelgestelde Vragen</h2>
+          <div class="faq-grid">
+            <details class="faq-item">
+              <summary>Welke certificering heb ik nodig?</summary>
+              <p>De benodigde certificering hangt af van verschillende factoren zoals het type items dat u wilt opbergen, verzekeringseisen en specifieke risico's. Bekijk onze <a href="/certificeringen">certificeringengids</a> voor meer informatie.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Waar moet ik op letten bij aanschaf?</summary>
+              <p>Let op certificeringen, formaat, type slot, garantie en installatievereisten. Lees onze <a href="/advies/aankoopgids">complete aankoopgids</a>.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Hoe werkt de installatie?</summary>
+              <p>De installatie verschilt per type kluis. Sommige modellen kunnen zelf geïnstalleerd worden, andere vereisen professionele montage. Bekijk onze <a href="/advies/installatie">installatiehandleiding</a>.</p>
+            </details>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h2>Persoonlijk Advies</h2>
+          <p>Heeft u specifieke vragen of wilt u persoonlijk advies? Onze experts helpen u graag.</p>
+          <div class="contact-options">
+            <a href="tel:+32123456789" class="contact-button">
+              <span>Bel direct</span>
+            </a>
+            <a href="/contact" class="contact-button secondary">
+              <span>Stuur bericht</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+  }
+
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .guide-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .guide-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .link-button {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .link-button:hover {
+    text-decoration: underline;
+  }
+
+  .faq-section {
+    margin: 4rem 0;
+  }
+
+  .faq-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--primary);
+    padding: 1rem;
+    margin: -1rem;
+  }
+
+  .faq-item p {
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+
+  .contact-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .contact-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .contact-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  .contact-button.secondary {
+    background: var(--secondary);
+  }
+
+  .contact-button:hover {
+    opacity: 0.9;
+  }
+
+  h2 {
+    color: var(--primary);
+    margin: 2rem 0 1rem;
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 0;
+    }
+    
+    .contact-options {
+      flex-direction: column;
+    }
+    
+    .guides-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

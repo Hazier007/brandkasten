@@ -1,0 +1,195 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description || "Brandkasten.be - Uw specialist in brandkasten en kluizen voor particulieren en bedrijven"} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="robots" content="index, follow" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header>
+			<nav class="main-nav">
+				<a href="/" class="logo">Brandkasten.be</a>
+				<div class="nav-links">
+					<a href="/type">Types Brandkasten</a>
+					<a href="/gebruik">Gebruikscategorieën</a>
+					<a href="/certificeringen">Certificeringen</a>
+					<a href="/advies">Hulp & Advies</a>
+				</div>
+				<div class="contact-info">
+					<a href="tel:+32123456789" class="phone">Bel voor advies</a>
+				</div>
+			</nav>
+		</header>
+		<slot />
+		<footer>
+			<div class="footer-content">
+				<div class="footer-section">
+					<h4>Contact</h4>
+					<p>Neem contact op voor persoonlijk advies</p>
+					<p>Ma-Vr: 09:00 - 18:00</p>
+					<p>Za: Op afspraak</p>
+				</div>
+				<div class="footer-section">
+					<h4>Informatie</h4>
+					<a href="/over-ons">Over Ons</a>
+					<a href="/contact">Contact</a>
+					<a href="/certificeringen">Certificeringen</a>
+					<a href="/normeringen">Normeringen</a>
+				</div>
+				<div class="footer-section">
+					<h4>Kenniscentrum</h4>
+					<a href="/blog">Blog</a>
+					<a href="/verzekering">Verzekeringseisen</a>
+					<a href="/vergelijken">Brandkasten Vergelijken</a>
+					<a href="/faq">Veelgestelde Vragen</a>
+				</div>
+				<div class="footer-section">
+					<h4>Expertise</h4>
+					<p>20+ jaar ervaring</p>
+					<p>Onafhankelijk advies</p>
+					<p>Erkend specialist</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--primary: #2c3e50;
+		--secondary: #34495e;
+		--accent: #3498db;
+		--background: #f8f9fa;
+		--text: #333;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		font-family: system-ui, sans-serif;
+		background: var(--background);
+		color: var(--text);
+	}
+
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.main-nav {
+		background: white;
+		padding: 1rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+
+	.logo {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: var(--primary);
+		text-decoration: none;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.nav-links a {
+		color: var(--secondary);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s ease;
+		padding: 0.5rem 1rem;
+	}
+
+	.nav-links a:hover {
+		color: var(--accent);
+	}
+
+	.contact-info .phone {
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	footer {
+		background: var(--primary);
+		color: white;
+		padding: 3rem 0;
+		margin-top: auto;
+	}
+
+	.footer-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		padding: 0 2rem;
+	}
+
+	.footer-section h4 {
+		margin: 0 0 1rem 0;
+		font-size: 1.2rem;
+		color: #fff;
+	}
+
+	.footer-section a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+		display: block;
+		margin: 0.5rem 0;
+		transition: color 0.3s ease;
+	}
+
+	.footer-section a:hover {
+		color: white;
+	}
+
+	.footer-section p {
+		color: rgba(255, 255, 255, 0.8);
+		margin: 0.5rem 0;
+	}
+
+	@media (max-width: 768px) {
+		.main-nav {
+			flex-direction: column;
+			gap: 1rem;
+			padding: 1rem;
+		}
+
+		.nav-links {
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.footer-content {
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		}
+	}
+</style>

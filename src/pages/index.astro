@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProductCard from '../components/ProductCard.astro';
+---
+
+<Layout 
+	title="Brandkasten.be | Specialist in Brandkasten en Kluizen" 
+	description="Ontdek ons uitgebreide assortiment brandkasten en kluizen voor particulieren en bedrijven. Veilig en betrouwbaar met professioneel advies."
+>
+	<main>
+		<h1>Specialist in Brandkasten en Kluizen</h1>
+		
+		<nav class="categories">
+			<a href="/type/brandwerende-kluis">Brandwerende Kluizen</a>
+			<a href="/type/inbraakwerende-kluis">Inbraakwerende Kluizen</a>
+			<a href="/type/documentenkluis">Documentenkluizen</a>
+			<a href="/type/vuurwapenkluis">Vuurwapenkluizen</a>
+		</nav>
+
+		<section class="featured-products">
+			<h2>Populaire Brandkasten</h2>
+			<div class="product-grid">
+				<ProductCard
+					title="Premium Brandwerende Kluis"
+					description="Gecertificeerde brandwerende kluis met 60 minuten brandwerendheid, ideaal voor waardevolle documenten en kostbaarheden"
+					image="/images/brandwerende-kluis.jpg"
+					certification="EN-1047"
+					url="/type/brandwerende-kluis/premium"
+				/>
+				<ProductCard
+					title="Inbraakwerende Documentenkluis"
+					description="Hoogwaardige kluis met EN-14450 certificering voor optimale bescherming van uw belangrijke documenten"
+					image="/images/documentenkluis.jpg"
+					certification="EN-14450"
+					url="/type/documentenkluis/premium"
+				/>
+			</div>
+		</section>
+
+		<section class="usps">
+			<div class="usp-grid">
+				<div class="usp-item">
+					<h3>Onafhankelijk Advies</h3>
+					<p>Wij bieden objectief advies over verschillende merken en types brandkasten</p>
+				</div>
+				<div class="usp-item">
+					<h3>Expertise</h3>
+					<p>Meer dan 20 jaar ervaring in brandkasten en beveiliging</p>
+				</div>
+				<div class="usp-item">
+					<h3>Certificeringen</h3>
+					<p>Uitgebreide kennis van normeringen en verzekeringseisen</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="categories-overview">
+			<h2>Voor Wie?</h2>
+			<div class="category-grid">
+				<a href="/gebruik/brandkasten-voor-bedrijven" class="category-card">
+					<h3>Voor Bedrijven</h3>
+					<p>Professionele oplossingen voor bedrijfsbeveiliging</p>
+				</a>
+				<a href="/gebruik/brandkasten-voor-particulieren" class="category-card">
+					<h3>Voor Particulieren</h3>
+					<p>Betrouwbare kluizen voor thuisgebruik</p>
+				</a>
+				<a href="/gebruik/brandkasten-voor-winkels" class="category-card">
+					<h3>Voor Winkels</h3>
+					<p>Specifieke oplossingen voor retail en horeca</p>
+				</a>
+				<a href="/gebruik/brandkasten-voor-kantoren" class="category-card">
+					<h3>Voor Kantoren</h3>
+					<p>Veilige opslag voor belangrijke documenten</p>
+				</a>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1200px;
+		max-width: calc(100% - 2rem);
+		color: #333;
+	}
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		text-align: center;
+		margin: 2rem 0;
+		color: #2c3e50;
+	}
+
+	.categories {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+		flex-wrap: wrap;
+	}
+
+	.categories a {
+		padding: 0.8rem 1.5rem;
+		background: #fff;
+		border-radius: 6px;
+		text-decoration: none;
+		color: #2c3e50;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+
+	.categories a:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	}
+
+	.product-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.usp-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin: 3rem 0;
+	}
+
+	.usp-item {
+		background: #fff;
+		padding: 2rem;
+		border-radius: 8px;
+		text-align: center;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+
+	.usp-item h3 {
+		color: #2c3e50;
+		margin-bottom: 1rem;
+	}
+
+	.category-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.category-card {
+		background: #fff;
+		padding: 2rem;
+		border-radius: 8px;
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.3s ease;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+
+	.category-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	}
+
+	h2 {
+		color: #2c3e50;
+		text-align: center;
+		margin: 3rem 0 2rem;
+		font-size: 2rem;
+	}
+
+	h3 {
+		color: #2c3e50;
+		margin: 0 0 1rem 0;
+		font-size: 1.25rem;
+	}
+
+	section {
+		margin: 4rem 0;
+	}
+</style>

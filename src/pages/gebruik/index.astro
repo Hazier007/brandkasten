@@ -1,0 +1,160 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Gebruikscategorieën Brandkasten | Brandkasten.be"
+  description="Ontdek de juiste brandkast voor uw specifieke situatie - oplossingen voor bedrijven, particulieren, winkels en kantoren."
+>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Gebruikscategorieën</h1>
+        <p class="lead">Specifieke oplossingen voor elke situatie</p>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="container">
+        <div class="category-grid">
+          <article class="category-card">
+            <div class="content">
+              <h2>Voor Bedrijven</h2>
+              <p>Professionele beveiligingsoplossingen voor bedrijven van elke omvang. Van kleine ondernemingen tot grote corporaties.</p>
+              <ul>
+                <li>Gecertificeerde brandkasten voor bedrijfskritische documenten</li>
+                <li>Inbraakwerende kluizen voor waardevolle bezittingen</li>
+                <li>Oplossingen voor meerdere gebruikers</li>
+                <li>Voldoet aan verzekeringseisen</li>
+              </ul>
+              <a href="/gebruik/brandkasten-voor-bedrijven" class="btn">Bekijk oplossingen voor bedrijven</a>
+            </div>
+          </article>
+
+          <article class="category-card">
+            <div class="content">
+              <h2>Voor Particulieren</h2>
+              <p>Betrouwbare kluizen voor thuisgebruik die optimale bescherming bieden voor uw waardevolle bezittingen.</p>
+              <ul>
+                <li>Compacte brandkasten voor thuisgebruik</li>
+                <li>Betaalbare beveiligingsoplossingen</li>
+                <li>Eenvoudige installatie en gebruik</li>
+                <li>Geschikt voor belangrijke documenten en waardevolle items</li>
+              </ul>
+              <a href="/gebruik/brandkasten-voor-particulieren" class="btn">Bekijk oplossingen voor particulieren</a>
+            </div>
+          </article>
+
+          <article class="category-card">
+            <div class="content">
+              <h2>Voor Winkels</h2>
+              <p>Specialistische oplossingen voor retail en horeca met focus op snelle en veilige opslag van contant geld.</p>
+              <ul>
+                <li>Afstortkluis voor dagopbrengsten</li>
+                <li>Snelle toegang voor bevoegd personeel</li>
+                <li>Koppeling met kassasystemen mogelijk</li>
+                <li>Compact en efficiënt design</li>
+              </ul>
+              <a href="/gebruik/brandkasten-voor-winkels" class="btn">Bekijk oplossingen voor winkels</a>
+            </div>
+          </article>
+
+          <article class="category-card">
+            <div class="content">
+              <h2>Voor Kantoren</h2>
+              <p>Professionele oplossingen voor de bescherming van bedrijfsdocumenten en digitale media.</p>
+              <ul>
+                <li>Brandwerende documentenkluizen</li>
+                <li>Datamediekluizen voor back-ups</li>
+                <li>Geschikt voor meerdere werkplekken</li>
+                <li>Uitbreidbare systemen</li>
+              </ul>
+              <a href="/gebruik/brandkasten-voor-kantoren" class="btn">Bekijk oplossingen voor kantoren</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .category-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+
+  .category-card h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .category-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  .category-card ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .category-card li {
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  .btn:hover {
+    background: var(--secondary);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 0;
+    }
+  }
+</style>
